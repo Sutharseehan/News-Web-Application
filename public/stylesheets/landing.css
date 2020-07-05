@@ -1,0 +1,151 @@
+body {
+  background-color: #000;
+}
+
+.animate {
+  border-radius: 4px;
+  background-color: #ADD8E6;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 13px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.animate span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.animate span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.animate:hover span {
+  padding-right: 25px;
+}
+
+.animate:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#landing-header h1 {
+  color: #fff;
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+  font: bold 70px Century Gothic, Arial;
+  font-weight: 900;
+  width: 100%;
+  height: 120px;
+	
+
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://www.nydailynews.com/resizer/EomQpzRlJsv_4g3QoBbWIhtyS8U=/630x630/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/DVDYMWXV4XKC27PGFFZPZCD7OM.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://pbs.twimg.com/media/Djmxx21XoAEQfZQ.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://assets.weforum.org/article/image/large_F1lpSz-GPutLjMAb4MPFZwTgamzGLZRRpB8CSlOFNwM.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://postmedialfpress.files.wordpress.com/2020/03/gettyimages-1208678891-e1584365544995.jpg?quality=100&strip=all&w=380);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
+  animation-delay: 40s; 
+}
+
+
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
