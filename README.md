@@ -6,7 +6,7 @@ A fully functional website that allows users to post articles they find intrigui
 
 This website makes use of features such as user authentication, CRUD utility for articles and comments, while also following RESTful notation.
 
-The stack for the webpage used is Node.JS, Express and MongoDB
+The stack for the webpage used is Node.JS, Express and MongoDB.
 
 ## Motivation
 
